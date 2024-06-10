@@ -1,0 +1,118 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .blog-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Arial, sans-serif';
+        color: #333;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .blog-container h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .blog-container .date {
+            font-size: 0.9em;
+            color: #95a5a6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .blog-container img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .blog-container p {
+            line-height: 1.6;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+            .blog-container p strong {
+                display: block;
+                margin: 10px 0;
+                font-weight: bold;
+                font-size: 1.2em;
+                color: #34495e;
+            }
+
+        .blog-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+            .blog-container a:hover {
+                background: #2980b9;
+            }
+
+</style>
+<div class="blog-container">
+    <h1>10 Reasons You Should Love Blogging</h1>
+    <div class="date">13 Nov, 2017•</div>
+    <p>Blog posts are a great way to get recognized within your community and share your voice. Here are the top 10 reasons you should love writing blog posts.</p>
+    <img src="~/images/blog2.png" alt="blog2 image loading" />
+    <p>
+        <strong>Anyone can make one:</strong>
+        For better or worse, anyone can write a blog post about anything they want. Everyone has a voice and the best voices will rise to the top.
+    </p>
+    <p>
+        <strong>The writer can show their personality:</strong>
+        In blog posts, the writer has more leeway to add in their voice and personality than other types of writing.
+    </p>
+    <p>
+        <strong>Blogs are a great form of mass communication:</strong>
+        You can help people, learn new things, entertain your audience—the possibilities are endless and amazing. Blogging opens up all of these to a very wide audience.
+    </p>
+    <p>
+        <strong>You can make money:</strong>
+        Get the right blog going and you can make a lot of money through advertising and sponsored posts.
+    </p>
+    <p>
+        <strong>It allows people to craft better thoughts:</strong>
+        Instead of reading haphazard, uneducated Facebook statuses, it's much better to see people's thought process in a well-written blog post.
+    </p>
+    <p>
+        <strong>You can establish a community:</strong>
+        Blogging allows you to connect with other individuals who share the same interests. Sharing ideas and opinions within your community helps establish yourself as a thought leader.
+    </p>
+    <p>
+        <strong>Good for SEO:</strong>
+        Keeping content on your site fresh and relevant, you can use your blog to boost the search engine ranking (SEO) of your site and your business.
+    </p>
+    <p>
+        <strong>It brings people back to your site:</strong>
+        If your blog is strong enough and updated regularly, people will come back looking for more and bring traffic back to your site as well.
+    </p>
+    <p>
+        <strong>It's free:</strong>
+        It costs you a grand total of zero dollars to post to the blog, so if you have something to say, there's nothing to stop you.
+    </p>
+    <p>
+        <strong>You can establish yourself as a thought leader:</strong>
+        A blog is a great place for your original thoughts, and it can be a wonderful way to show off your individuality. If people like your ideas, you can become a thought leader in your industry!
+    </p>
+    <p>
+        What else do you love about blogs? Let me know!
+    </p>
+    <a href="@Url.Action("Blog", "Bear")">Back to Blogs</a>
+</div>

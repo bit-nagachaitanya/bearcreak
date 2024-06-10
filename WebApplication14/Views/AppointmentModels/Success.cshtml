@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    h2 {
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    h5 {
+        color: #666666;
+    }
+</style>
+<h2>request for consultation submitted  </h2>
+<h5>Redirecting to home page in few seconds.....</h5>
+
+
+<script>
+    setTimeout(function () {
+        window.location.href = '@Url.Action("Home", "Bear")';
+    }, 5000); 
+</script>

@@ -1,0 +1,326 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(0, 109, 122);
+    color: white;
+    position: fixed;
+    top: 0%;
+   
+    height: 80px;
+    width: 100%; /* Keep this line */
+    z-index: 1000;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(0, 109, 122);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content li {
+        display: block;
+    }
+
+/* Display the dropdown menu on hover */
+li:hover .dropdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul {
+    display: flex;
+}
+
+    ul li {
+        list-style: none;
+    }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+            margin-inline: 22px;
+        }
+
+.logo {
+    font-size: 22px;
+}
+    .logo ul li a:hover {
+        color: rgb(0, 109, 122);
+    }
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    background-color: rgb(0, 109, 122);
+    padding: 33px;
+    
+    margin-bottom: 20px;
+
+}
+
+ .main img {
+        width: 710px;
+    }
+
+.mainText {
+    margin-top: 44px;
+    color: white;
+}
+
+    .mainText h1 {
+        font-size: 66px;
+    }
+
+    .mainText p {
+        margin-top: 22px;
+    }
+
+    .mainText button {
+        margin-top: 22px;
+        width: 140px;
+        height: 40px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        border: none;
+    }
+
+.head {
+    text-align: center;
+    padding: 88px;
+}
+
+.service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .service .serviceCard {
+        width: 200px;
+        padding: 22px;
+        border: 2px solid black;
+        text-align: center;
+        margin-inline: 22px;
+        cursor: pointer;
+        margin-top: 22px;
+    }
+
+.serviceCard:hover {
+    background-color: rgb(0, 74, 98);
+}
+
+.doctors {
+    width: 830px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.team {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    transition: all 1s ease;
+}
+
+    .team img {
+        width: 240px;
+        height: 250px;
+        margin-inline: 20px;
+    }
+
+.blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blogCard {
+    width: 300px;
+    padding: 18px;
+    background-color: rgb(1, 75, 75);
+    text-align: center;
+    color: white;
+    margin-inline: 20px;
+    margin-top: 22px;
+}
+
+    .blogCard img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .blogCard a {
+        padding: 4px 15px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        top: 7px;
+        font-size: 20px;
+    }
+
+
+/*.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 66px;
+    margin-top: 66px;
+    background-color: black;
+    color: white;
+}*/
+/*
+    .footer p {
+        margin-top: 22px;
+    }*/
+
+
+@media screen and (max-width:1100px) {
+    .main {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .doctors {
+        width: 90%;
+    }
+
+    .team img {
+        width: 200px;
+        margin-inline: 11px;
+    }
+}
+
+@media screen and (max-width:760px) {
+
+    .team img {
+        width: 150px;
+        margin-inline: 11px;
+    }
+
+    .main img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    .team img {
+        width: 30%;
+        height: 120px;
+        margin-inline: 4px;
+    }
+
+    .form {
+        width: 76%;
+    }
+
+    .detailCard {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:920px) {
+    ul {
+        display: none;
+    }
+
+    #bar {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width:620px) {
+    .main h1 {
+        font-size: 33px;
+    }
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+
+
+
+

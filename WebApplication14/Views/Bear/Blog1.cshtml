@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style> 
+    .blog-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Arial, sans-serif';
+        color: #333;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .blog-container h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .blog-container .date {
+            font-size: 0.9em;
+            color: #95a5a6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .blog-container img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .blog-container p {
+            line-height: 1.6;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .blog-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+            .blog-container a:hover {
+                background: #2980b9;
+            }
+
+
+</style>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="blog-container">
+    <h1>My First Blog Post</h1>
+    <div class="date">13 Nov, 2017•</div>
+    <p>It's official, I have a blog and I know how to use it.</p>
+    <img src="~/images/blog1.png" alt="blog 1 Image" />
+    <p>I have finally decided to take the plunge and add a blog to my site. I always wanted an easy way to share information with visitors and I'm super excited to start this journey. Keep coming back to my site and check for updates right here on the blog.</p>
+    <a href="@Url.Action("Blog", "Bear")">Back to Blogs</a>
+</div>

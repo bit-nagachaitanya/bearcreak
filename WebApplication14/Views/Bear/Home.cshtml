@@ -1,0 +1,176 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+   /*  .container {
+        max-width: 800px;
+        margin: 50px auto;
+    } */
+    .custom-section {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .custom-section .card-title {
+            color: #343a40;
+        }
+
+        .custom-section .card-text {
+            color: #6c757d;
+        }
+
+        .custom-section .btn-danger {
+            background-color: #dc3545;
+            border: none;
+        }
+
+            .custom-section .btn-danger:hover {
+                background-color: #c82333;
+            }
+
+        .custom-section .image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* .custom-section a {
+            color: #dc3545;
+        }
+
+            .custom-section a:hover {
+                color: #c82333;
+                text-decoration: none;
+            } */
+</style>
+<body>
+    <center>
+<div class="main" style="padding-top: 60px; background-color: #f8f9fa;">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="/images/mainImage.png" alt="" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-md-6 text-center text-md-start">
+                <div class="mainText">
+                    <h1 class="display-4 mb-3" style="color: #007bff; font-family: 'Arial', sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">Bear Creek</h1>
+                    <h2 class="display-5 mb-4" style="color: #007bff; font-family: 'Arial', sans-serif;">Pharmacy LLC</h2>
+                    <p class="lead mb-4" style="font-size: 18px; color: #333;">Serving and Located in <br>Keller, Texas</p>
+                    <p class="lead"><span style="color: #007bff;">Call Us: 817-562-4766</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </center>
+<div class="custom-section container mt-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 content">
+            <h5 class="card-title">Customized Medications</h5>
+            <p class="card-text">
+                If you're having trouble adjusting to standard medications,
+                Bear Creek Pharmacy LLC may be able to help. We offer compounding
+                pharmacy options.
+            </p>
+            <p class="card-text">
+                We have the ability to provide custom medications that work for you.
+                <a href="tel:817-562-4766">Call us</a> today to schedule your FREE consultation.
+            </p>
+           
+                <a href="@Url.Action("Pharmacy", "Bear")" class="btn btn-danger">Learn More</a>
+        </div>
+        <div class="col-md-6 image">
+            <img src="/images/custMed.jpg" alt="Customized Medications" class="img-fluid rounded">
+        </div>
+    </div>
+</div>
+
+    <div class="custom-section container mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-5 image">
+                <img src="/images/custMed.jpg" alt="Customized Medications" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 content">
+                <h5 class="card-title">Reliable Rentals</h5>
+                <p class="card-text">
+                    If you've been injured or are recovering from surgery and need help getting around, we can help you.
+                </p>
+                <p class="card-text">
+                    We offer a variety of rentals including walkers, canes, shower chairs and more. Find the help you need.
+                </p>
+                
+                <a href="@Url.Action("Rentals", "Bear")" class="btn btn-danger">Find what you need</a>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="custom-section container mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 content">
+                <h5 class="card-title">Durable Medical Braces</h5>
+                <p class="card-text">
+                    Do you need a brace to help improve your mobility? Are you looking for an apparatus to help you reduce back pain?
+
+                </p>
+                <p class="card-text">
+                    If you answered yes, it's time to visit Bear Creek Pharmacy. We've a fine selection of braces and other medical equipment. Walk-ins are welcome.
+                </p>
+                
+                <a href="@Url.Action("Braces", "Bear")" class="btn btn-danger">Get the right Braces</a>
+            </div>
+            <div class="col-md-6 image">
+                <img src="/images/custMed.jpg" alt="Customized Medications" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="custom-section container mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-5 image">
+
+                <div class="container-fluid">
+                    <div class="text-center">
+                        <video width="350" height="260" controls>
+                            <source src="~/videos/bear-creek-pharmacy-llc-jbfpf8zz.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 content">
+                <h5 class="card-title">Receive Fast Service and Expert Advice</h5>
+                <p class="card-text">
+                    Don't wait in line. You can get all of your medications fast and filled by knowledgeable pharmacists. We're proud to be a locally-owned and operated business.
+
+                </p>
+                <p class="card-text">
+                    Get <b>FREE delivery</b> when you sign up for our mail service. Receiving your prescriptions by mail is a great way to save time and money.
+                </p>
+                
+                <a href="@Url.Action("Medical_Supplies", "Bear")" class="btn btn-danger">Learn More</a>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

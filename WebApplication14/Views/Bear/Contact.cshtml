@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebApplication14.Models.ContactModel
+
+
+<style rel="stylesheet" href="~/css/Contact.css"></style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+    }
+
+</style>
+
+<div class="container">
+    <h1>Contact Us</h1>
+@using (Html.BeginForm("SuccessContact", "Contact", FormMethod.Post, new { id = "contactForm", @class = "needs-validation", novalidate = "novalidate" }))
+{ 
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-group animated fadeInLeft">
+                @Html.LabelFor(model => model.Name, "Name")
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", required = "required", placeholder = "Enter your name" })
+                <div class="invalid-feedback">
+                    Please enter your name.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="form-group animated fadeInRight">
+                @Html.LabelFor(model => model.Email, "Email")
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", required = "required", type = "email", placeholder = "Enter your email" })
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-group animated fadeInLeft">
+                @Html.LabelFor(model => model.PhoneNumber, "Phone Number")
+                @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", required = "required", type = "tel", pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}", placeholder = "Enter your phone number" })
+                <div class="invalid-feedback">
+                    Please enter your phone number in the format: 123-456-7890
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="form-group animated fadeInRight">
+                @Html.LabelFor(model => model.Message, "Message")
+                @Html.TextAreaFor(model => model.Message, new { @class = "form-control", rows = "4", required = "required", placeholder = "Enter your message" })
+                <div class="invalid-feedback">
+                    Please enter a message.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group animated fadeInUp">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+    </div>
+
+
+    }
+</div>

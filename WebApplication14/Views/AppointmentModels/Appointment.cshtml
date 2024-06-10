@@ -1,0 +1,127 @@
+﻿@model WebApplication14.Models.AppointmentModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Form container */
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+    }
+
+    /* Form title */
+    .form-title {
+       
+        text-align: center;
+        font-size: 24px;
+        color: #007bff; /* Blue color */
+        margin-bottom: 20px;
+    }
+
+    /* Form labels */
+    label {
+        font-weight: bold;
+        color: #333333;
+    }
+
+    /* Form inputs */
+    input[type="text"],
+    input[type="tel"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    /* Form submit button */
+    .btn-submit {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #ffffff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+    /* Error messages */
+    .text-danger {
+        color: red;
+    }
+
+    /* Small text */
+    small {
+        color: #666666;
+    }
+
+    .form-description {
+        text-align: center;
+        font-size: 16px;
+        color: #666666; /* Gray color */
+        margin-bottom: 40px;
+    }
+</style>
+
+
+<h1 class="form-title">Request For Consultation</h1>
+<p class="form-description"><span>Fill out this short form and a Bear Creek Pharmacy LLC representative will contact you shortly to schedule your consultation. If you need immediate assistance, please call 817-562-4766.</span></p>
+<div class="form-container">
+    @using (Html.BeginForm("SubmitAppointmentForm", "AppointmentModels", FormMethod.Post))
+    {
+        <div>
+            <label asp-for="First_name">First Name:</label>
+            <input asp-for="First_name" class="form-control" required />
+            <span asp-validation-for="First_name" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Last_name">Last Name:</label>
+            <input asp-for="Last_name" class="form-control" required />
+            <span asp-validation-for="Last_name" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email" class="form-control" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Phonenumber">Phone Number:</label>
+            <input asp-for="Phonenumber" class="form-control" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+            <small>Format: 123-456-7890</small>
+            <span asp-validation-for="Phonenumber" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="Services">Services:</label>
+            <select asp-for="Services" class="form-control" required>
+                <option value="">Select a service</option>
+                <option value="rentals">Rentals</option>
+                <option value="pharmacy">Pharmacy</option>
+                <option value="Mail Services">Mail Services</option>
+                <option value="Medical services">Medical services</option>
+                <option value="Accepted insurance services">Accepted insurance services</option>
+                <option value="convinence services">Convenience services</option>
+                <option value="Braces">Braces</option>
+                <option value="Others">Others</option>
+            </select>
+            <span asp-validation-for="Services" class="text-danger"></span>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+    }
+</div>
